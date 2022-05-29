@@ -3,7 +3,7 @@ node {
      stage ('CheckoutCode'){git branch: 'development', url: 'https://github.com/dharikrishna77/maven-web-application.git'
 }
       stage('Build') {sh "${mavenHome}/bin/mvn clean package"}
-
+/*
       stage('ExecuteSonarQubeReport') {sh "${mavenHome}/bin/mvn sonar:sonar"}
 
      stage('ExecuteArtifactIdIntoNexus') {sh "${mavenHome}/bin/mvn deploy"}
@@ -11,4 +11,5 @@ node {
       stage('DeployApplicationIntoTomcatServer') {sshagent(['edbc291d-ac99-4fef-a457-9c5f26d780c2']) {
     sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.110.194.12:/opt/apache-tomcat-9.0.63/webapps/"}
       }
+      */
  }
